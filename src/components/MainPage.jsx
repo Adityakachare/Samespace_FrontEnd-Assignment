@@ -8,23 +8,23 @@ const MainPage = () => {
 
   useEffect(() => {
     if (songs && songs.length > 0) {
-      const selectedSong = songs[0]; // For example, take the first song or logic to get the selected song
+      const selectedSong = songs[0]; // Default to first song
       if (selectedSong && selectedSong.accent) {
-        setBackgroundColor(selectedSong.accent); // Set the accent color as background
+        setBackgroundColor(selectedSong.accent);
       }
     }
   }, [songs]);
 
   return (
     <div
-      className="flex flex-col justify-between p-4 h-screen transition-colors duration-500"
+      className="flex flex-col justify-between p-4 min-h-screen transition-colors duration-500"
       style={{ backgroundColor }} // Apply dynamic background color
     >
-      <header className="flex items-center p-0 space-x-2">
-        <SiSpotify className="text-white sm:w-10 sm:h-10 md:w-10 md:h-20 lg:w-10 lg:h-8 xl:w-8 xl:h-12 xl:m-1" />
-        <span className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-2xl font-inter font-semibold">
+      <header className="flex items-center space-x-2">
+        <SiSpotify className="text-white sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10" />
+        <span className="text-white text-lg sm:text-xl md:text-1xl lg:text-2xl xl:text-3xl font-inter font-semibold">
           Spotify
-          <sup className="text-sm sm:text-base md:text-lg">®</sup>
+          <sup className="text-xs sm:text-sm md:text-base lg:text-lg">®</sup>
         </span>
       </header>
     </div>
