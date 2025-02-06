@@ -9,6 +9,7 @@ const MainPage = () => {
   const [backgroundColor, setBackgroundColor] = useState("#0f0f0f");
   const [showTopTracks, setShowTopTracks] = useState(false); // State for toggling between For You and Top Tracks
   const [selectedSong, setSelectedSong] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     if (songs && songs.length > 0) {
@@ -37,12 +38,13 @@ const MainPage = () => {
         showTopTracks={showTopTracks}
         setShowTopTracks={setShowTopTracks}
       />
-      <SearchBar />
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       {/* Render the SongList component */}
       {/* <SongList showTopTracks={showTopTracks} /> */}
       <SongList
         showTopTracks={showTopTracks}
         setSelectedSong={setSelectedSong}
+        searchQuery={searchQuery}
       />
     </div>
   );

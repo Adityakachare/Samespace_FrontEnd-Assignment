@@ -1,11 +1,42 @@
-import React from 'react'
+import React, { useState, useRef } from "react";
+import { FaTimes } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
 
-const SearchBar = () => {
+const SearchBar = ({ searchQuery, setSearchQuery }) => {
+  const searchInputRef = useRef(null);
+
+  const handleClearSearch = () => {
+    setSearchQuery("");
+    searchInputRef.current.focus();
+  };
+
+  const handleSearchIconClick = () => {
+    searchInputRef.current.focus();
+  };
+
   return (
-    <div>
-      
+    <div className="absolute top-[10%] left-[50%] sm:left-[24%] transform -translate-x-1/2 sm:translate-x-0 flex items-center bg-white/10 rounded-md px-3 py-2 w-full sm:w-1/3 max-w-[450px]">
+      <input
+        ref={searchInputRef}
+        type="text"
+        placeholder="Search Song, Artist"
+        className="flex-1 bg-transparent text-white placeholder-white/50 outline-none px-2 tracking-wider font-extralight"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+      {searchQuery ? (
+        <FaTimes
+          className="text-white cursor-pointer"
+          onClick={handleClearSearch}
+        />
+      ) : (
+        <FiSearch
+          className="text-white cursor-pointer"
+          onClick={handleSearchIconClick}
+        />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
