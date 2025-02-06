@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@font-face {
+    font-family: "Spotify Mix";
+    src: url("/path-to-your-font/SpotifyMix.woff2") format("woff2"),
+         url("/path-to-your-font/SpotifyMix.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    font-family: "Spotify Mix", sans-serif;
+  }
+  
