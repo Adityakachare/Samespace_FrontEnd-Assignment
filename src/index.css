@@ -1,15 +1,22 @@
 @import "tailwindcss";
+
 @font-face {
-    font-family: "Spotify Mix";
-    src: url("/path-to-your-font/SpotifyMix.woff2") format("woff2"),
-         url("/path-to-your-font/SpotifyMix.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  body {
-    font-family: "Spotify Mix", sans-serif;
-  }
-  /* Custom Scrollbar Styling */
+  font-family: "Spotify Mix";
+  src: url("/public/fonts/SpotifyMix-Bold.woff") format("woff"),
+    url("/public/fonts/SpotifyMix-Bold.woff2") format("woff2"),
+    url("/public/fonts/SpotifyMix-Extrabold.woff") format("woff"),
+    url("/public/fonts/SpotifyMix-Extrabold.woff2") format("woff2"),
+    url("/public/fonts/SpotifyMix-Light.woff") format("woff"),
+    url("/public/fonts/SpotifyMix-Light.woff2") format("woff2");
+
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: "Spotify Mix Bold", sans-serif;
+}
+/* Custom Scrollbar Styling */
 .group::-webkit-scrollbar {
   width: 6px;
 }
@@ -22,4 +29,3 @@
 .group::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
 }
-

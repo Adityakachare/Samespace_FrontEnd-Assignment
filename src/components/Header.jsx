@@ -9,7 +9,7 @@ const Header = ({ showTopTracks, setShowTopTracks }) => {
     <div className="flex justify-center sm:justify-start space-x-6 absolute top-10 sm:top-6 left-1/2 sm:left-1/4 transform -translate-x-1/2 sm:translate-x-0">
       <h2
         className={`cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl font-bold transition-all duration-300 ease-in-out ${
-          !showTopTracks ? "text-white" : "text-white/50"
+          !showTopTracks ? "text-white" : "text-white/40"
         }`}
         onClick={() => handleSelection(false)}
       >
@@ -17,7 +17,7 @@ const Header = ({ showTopTracks, setShowTopTracks }) => {
       </h2>
       <h2
         className={`cursor-pointer text-base sm:text-lg md:text-xl lg:text-2xl font-bold transition-all duration-300 ease-in-out ${
-          showTopTracks ? "text-white" : "text-white/50"
+          showTopTracks ? "text-white" : "text-white/40"
         }`}
         onClick={() => handleSelection(true)}
       >

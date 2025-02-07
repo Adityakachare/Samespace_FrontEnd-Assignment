@@ -68,14 +68,17 @@ const SongList = ({ showTopTracks, setSelectedSong, searchQuery }) => {
             />
             <div className="flex justify-between w-full items-center">
               <div>
-                <span className="block text-base sm:text-lg font-normal text-white tracking-wider">
+                <span
+                  className="font-thin block text-base sm:text-lg text-white tracking-wider"
+                  style={{ fontWeight: 50 }}
+                >
                   {song.name}
                 </span>
-                <span className="text-xs sm:text-sm text-white/70 tracking-wider">
+                <span className="text-xs sm:text-sm text-white/50 tracking-wider">
                   {song.artist}
                 </span>
               </div>
-              <span className="text-base sm:text-lg text-white/70">
+              <span className="text-base sm:text-lg text-white/50">
                 {durations[song.id]
                   ? formatDuration(durations[song.id])
                   : "Loading..."}

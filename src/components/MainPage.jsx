@@ -22,8 +22,10 @@ const MainPage = () => {
 
   return (
     <div
-      className="flex flex-col justify-start p-4 min-h-screen transition-colors duration-500"
-      style={{ backgroundColor }} // Apply dynamic background color
+      className="flex flex-col justify-start p-4 min-h-screen transition-colors duration-1000"
+      style={{
+        background: `linear-gradient(120deg, ${backgroundColor}  10%,#0f0f0f 90%)`,
+      }} 
     >
       <header className="flex items-center justify-center space-x-2 md:justify-start">
         <SiSpotify className="text-white sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-8 xl:h-8" />

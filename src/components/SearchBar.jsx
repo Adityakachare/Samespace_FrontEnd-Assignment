@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
-import { FiSearch } from "react-icons/fi";
+import { LuSearch } from "react-icons/lu";
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   const searchInputRef = useRef(null);
@@ -26,12 +26,12 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
       />
       {searchQuery ? (
         <FaTimes
-          className="text-white cursor-pointer"
+          className="text-white/50 cursor-pointer text-xl sm:text-xl md:text-2xl p-1 "
           onClick={handleClearSearch}
         />
       ) : (
-        <FiSearch
-          className="text-white cursor-pointer"
+        <LuSearch
+          className="text-white/50 cursor-pointer text-xl sm:text-2xl md:text-3xl p-1 "
           onClick={handleSearchIconClick}
         />
       )}
