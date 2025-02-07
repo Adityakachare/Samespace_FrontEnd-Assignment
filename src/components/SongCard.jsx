@@ -45,11 +45,10 @@ const SongCard = ({
           {song.artist}
         </p>
 
-        {/* Song Cover */}
-        <img
+               <img
           src={`https://cms.samespace.com/assets/${song.cover}`}
           alt={song.name}
-          className="w-[250px] h-[250px] xs:w-[300px] xs:h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] object-cover rounded-md shadow-xl transition-transform duration-300 hover:scale-[1.01]"
+          className="w-[400px] aspect-square xs:w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] object-cover rounded-md shadow-xl transition-transform duration-300 hover:scale-[1.01] mx-auto"
         />
       </div>
 
