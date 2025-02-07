@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useSongs } from "../context/SongContext";
 
-const SongList = ({ showTopTracks, setSelectedSong, searchQuery }) => {
+const SongList = ({
+  showTopTracks,
+  selectedSong,
+  setSelectedSong,
+  searchQuery,
+}) => {
   const songs = useSongs();
   const [durations, setDurations] = useState({});
-  const [selectedSongId, setSelectedSongId] = useState(null); // Track selected song
 
   const handleSongClick = (song) => {
     setSelectedSong(song);
-    setSelectedSongId(song.id); // Update selected song ID
   };
 
   useEffect(() => {
@@ -56,8 +59,8 @@ const SongList = ({ showTopTracks, setSelectedSong, searchQuery }) => {
             onClick={() => handleSongClick(song)}
             className={`flex items-center w-full p-3 rounded-lg cursor-pointer transition-all duration-300 ease-in-out 
               ${
-                selectedSongId === song.id
-                  ? "bg-white/20 scale-101" // Apply hover styles when selected
+                selectedSong?.id === song.id
+                  ? "bg-white/20 scale-101" // Apply active styling
                   : "hover:bg-white/20 hover:scale-101"
               }`}
           >
