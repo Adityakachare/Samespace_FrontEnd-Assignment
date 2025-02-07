@@ -133,7 +133,9 @@ const AudioPlayerComponent = ({
           <div className="relative flex items-center w-full">
             <BiDotsHorizontalRounded
               className="absolute left-[30px] top-[43px] z-10 text-[30px] text-white cursor-pointer bg-[rgba(200,200,200,0.3)] rounded-full border-none p-[5px]"
-              onClick={toggleSongList}
+              onClick={() => {
+                if (window.innerWidth <= 640) toggleSongList(); // Only for mobile
+              }}
             />
 
             {/* Audio Player */}

@@ -1,5 +1,3 @@
-
-
 import React, { useEffect } from "react";
 import AudioPlayerComponent from "../components/AudioPlayerComponent";
 
@@ -10,6 +8,7 @@ const SongCard = ({
   currentSongIndex,
   setCurrentSongIndex,
   setBackgroundColor,
+  toggleSongList, // Accept toggleSongList as a prop
 }) => {
   if (!song) return null;
 
@@ -62,8 +61,9 @@ const SongCard = ({
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
         setBackgroundColor={setBackgroundColor}
-        onNext={handleNextSong}  // Pass function to handle next song
-        onPrev={handlePreviousSong}  // Pass function to handle previous song
+        onNext={handleNextSong} // Pass function to handle next song
+        onPrev={handlePreviousSong} // Pass function to handle previous song
+        toggleSongList={toggleSongList} // Fix: Pass toggleSongList here
       />
     </div>
   );
