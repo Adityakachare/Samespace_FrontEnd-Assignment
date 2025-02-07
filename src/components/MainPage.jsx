@@ -43,7 +43,7 @@ const MainPage = () => {
           <SiSpotify className="text-white sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-8 xl:h-8" />
           <span className="text-white text-lg sm:text-xl md:text-1xl lg:text-2xl xl:text-3xl font-inter font-semibold">
             Spotify
-            <sup className="text-xs sm:text-sm md:text-base lg:text-lg">®</sup>
+            <sup className="text-xs top-[-13px]">®</sup>
           </span>
         </header>
 

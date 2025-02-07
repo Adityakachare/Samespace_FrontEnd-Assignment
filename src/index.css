@@ -1,18 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Spotify Mix";
-  src: url("/public/fonts/SpotifyMix-Bold.woff") format("woff"),
-    url("/public/fonts/SpotifyMix-Bold.woff2") format("woff2"),
-    url("/public/fonts/SpotifyMix-Extrabold.woff") format("woff"),
-    url("/public/fonts/SpotifyMix-Extrabold.woff2") format("woff2"),
-    url("/public/fonts/SpotifyMix-Light.woff") format("woff"),
-    url("/public/fonts/SpotifyMix-Light.woff2") format("woff2");
-
-  font-weight: 300;
-  font-style: normal;
-}
-
 body {
   font-family: "Spotify Mix Bold", sans-serif;
 }

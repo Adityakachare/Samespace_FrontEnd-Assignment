@@ -54,6 +54,12 @@ const AudioPlayerComponent = ({
       background-color: white !important;
     }
     
+    @media (max-width: 640px) {
+  .rhap_controls-section button, .rhap_main-controls-button{
+  font-size: 30px !important;
+  }
+}
+
   `;
 
   // Handle song selection changes
@@ -114,7 +120,7 @@ const AudioPlayerComponent = ({
         <div className="w-full max-w-[90%] sm:max-w-[500px] rounded-lg flex flex-col items-center">
           <div className="relative flex items-center w-full">
             <BiDotsHorizontalRounded
-              className="absolute left-[30px] top-[43px] z-10 text-[30px] text-white cursor-pointer bg-[rgba(200,200,200,0.3)] rounded-full border-none p-[5px]"
+              className="absolute left-[25px] top-[45px] z-10 text-[25px] text-white cursor-pointer bg-[rgba(200,200,200,0.3)] rounded-full border-none p-[5px] md:text-3xl lg:text-3xl lg:top-[40px]"
               onClick={() => {
                 if (window.innerWidth <= 640) toggleSongList(); // Only for mobile
               }}

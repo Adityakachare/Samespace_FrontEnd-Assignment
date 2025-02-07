@@ -69,7 +69,7 @@ const SongList = ({
               className={`flex items-center w-full p-3 rounded-lg cursor-pointer transition-all duration-300 ease-in-out
               ${
                 selectedSong?.id === song.id
-                  ? "bg-white/20 scale-101" 
+                  ? "bg-white/20 scale-101"
                   : "hover:bg-white/20 hover:scale-101"
               }`}
             >
@@ -81,8 +81,8 @@ const SongList = ({
               <div className="flex justify-between w-full items-center">
                 <div>
                   <span
-                    className="font-thin block text-base sm:text-lg text-white tracking-wider"
-                    style={{ fontWeight: 50 }}
+                    className="font-normal block text-base sm:text-lg text-white tracking-wider"
+                    
                   >
                     {song.name}
                   </span>
