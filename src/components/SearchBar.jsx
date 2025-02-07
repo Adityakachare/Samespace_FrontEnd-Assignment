@@ -15,7 +15,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
   };
 
   return (
-    <div className="absolute top-[10%] left-[50%] sm:left-[24%] transform -translate-x-1/2 sm:translate-x-0 flex items-center bg-white/10 rounded-md px-3 py-2 w-full sm:w-1/3 max-w-[450px]">
+    <div className="absolute top-[9%] left-[50%] sm:left-[24%] transform -translate-x-1/2 sm:translate-x-0 flex items-center bg-white/10 rounded-md px-3 py-2 w-full sm:w-1/3 max-w-[450px]">
       <input
         ref={searchInputRef}
         type="text"
