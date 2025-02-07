@@ -16,46 +16,59 @@ const AudioPlayerComponent = ({
 
   // Custom styles for hiding elements & styling player
   const customStyles = `
-    .rhap_time, .rhap_total-time, .rhap_current-time, .rhap_loop-button, .rhap_progress-indicator {
-      display: none !important;
-    }
-       .rhap_container {
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-  }
-    .rhap_volume-button {
-      color: white !important;
-      background: rgba(255, 255, 255, 0.3) !important;
-      padding: 4px !important;
-      border-radius: 50%;
-      font-size: 75px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      margin-right: 2px  !important;
-      
-    }
-    .rhap_volume-bar{
-      background-color: rgba(255, 255, 255, 0.3) !important;
-      margin-right: 15px !important;
-    }
-    .rhap_volume-indicator, .rhap_controls-section button, .rhap_main-controls-button {
-      color: white !important;
-    }
-    .rhap_volume-indicator{
-      background-color: white !important;
-    }
-    .rhap_progress-bar, .rhap_progress-bar-background {
-      width: 100% !important;
-      background: rgba(255, 255, 255, 0.3) !important;
-    }
-    .rhap_progress-filled {
-      background-color: white !important;
-    }
-  
+.rhap_time, 
+.rhap_total-time, 
+.rhap_current-time, 
+.rhap_loop-button, 
+.rhap_progress-indicator {
+  display: none !important;
+}
 
-  @media (max-width: 640px) {
+.rhap_container {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.rhap_volume-button {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  padding: 4px !important;
+  border-radius: 50%;
+  font-size: 75px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 2px !important;
+}
+
+.rhap_volume-bar {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  margin-right: 15px !important;
+}
+
+.rhap_volume-indicator, 
+.rhap_controls-section button, 
+.rhap_main-controls-button {
+  color: white !important;
+}
+
+.rhap_volume-indicator {
+  background-color: white !important;
+}
+
+.rhap_progress-bar, 
+.rhap_progress-bar-background {
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.rhap_progress-filled {
+  background-color: white !important;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 640px) {
   .rhap_controls-section {
     gap: 0.2px !important; /* Reduce space between buttons */
   }
@@ -65,10 +78,10 @@ const AudioPlayerComponent = ({
     font-size: 25px !important;
     margin: 0.1px !important; /* Reduce margin between buttons */
   }
-}
 
+    .rhap_volume-bar {
+    margin-left: 2px !important;}
 }
-
   `;
 
   // Handle song selection changes
