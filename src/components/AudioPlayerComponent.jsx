@@ -53,11 +53,20 @@ const AudioPlayerComponent = ({
     .rhap_progress-filled {
       background-color: white !important;
     }
-    
-    @media (max-width: 640px) {
-  .rhap_controls-section button, .rhap_main-controls-button{
-  font-size: 30px !important;
+  
+
+  @media (max-width: 640px) {
+  .rhap_controls-section {
+    gap: 0.2px !important; /* Reduce space between buttons */
   }
+
+  .rhap_controls-section button, 
+  .rhap_main-controls-button {
+    font-size: 25px !important;
+    margin: 0.1px !important; /* Reduce margin between buttons */
+  }
+}
+
 }
 
   `;
