@@ -39,14 +39,8 @@ This application is a **React.js** based music streaming application, built with
 ## 📡 **REST API Usage**  
 The app fetches song data from the **Samespace API**, including:  
 - **Title, Artist, Cover Image, and Duration**  
-- **Dynamic Cover Image** via:  
-  ```plaintext
-  https://cms.samespace.com/assets/{COVER_IMAGE_ID}
-  ```
-- **API Endpoint:**  
-  ```plaintext
-  https://cms.samespace.com/items/songs
-  ```
+- **Dynamic Cover Image**
+- **API Endpoint**  
 - **API Integration** is handled inside `services/api.jsx`.  
 
 
