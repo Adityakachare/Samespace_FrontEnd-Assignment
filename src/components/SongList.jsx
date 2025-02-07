@@ -51,7 +51,6 @@ const SongList = ({
 
   return (
     <div className="flex flex-col w-full">
-      {/* Header and SearchBar moved here */}
       <Header
         showTopTracks={showTopTracks}
         setShowTopTracks={setShowTopTracks}
@@ -70,7 +69,7 @@ const SongList = ({
               className={`flex items-center w-full p-3 rounded-lg cursor-pointer transition-all duration-300 ease-in-out
               ${
                 selectedSong?.id === song.id
-                  ? "bg-white/20 scale-101" // Apply active styling
+                  ? "bg-white/20 scale-101" 
                   : "hover:bg-white/20 hover:scale-101"
               }`}
             >

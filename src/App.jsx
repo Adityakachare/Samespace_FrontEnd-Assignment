@@ -1,5 +1,5 @@
 import React from "react";
-import { SongProvider } from "./context/SongContext"; // Import the SongProvider
+import { SongProvider } from "./context/SongContext"; 
 import Home from "./pages/Home";
 
 function App() {

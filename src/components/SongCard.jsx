@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AudioPlayerComponent from "../components/AudioPlayerComponent";
 
 const SongCard = ({
@@ -8,7 +8,7 @@ const SongCard = ({
   currentSongIndex,
   setCurrentSongIndex,
   setBackgroundColor,
-  toggleSongList, // Accept toggleSongList as a prop
+  toggleSongList,
 }) => {
   if (!song) return null;
 
@@ -25,13 +25,6 @@ const SongCard = ({
     setSelectedSong(songs[prevIndex]);
   };
 
-  // Update background color when song changes
-  useEffect(() => {
-    if (song?.accent) {
-      setBackgroundColor(song.accent);
-    }
-  }, [song, setBackgroundColor]);
-
   return (
     <div className="w-full sm:w-1/2 flex flex-col justify-center items-center p-4 sm:mt-[-100px] mt-4">
       <div className="flex flex-col items-center sm:items-start p-6 w-full max-w-[500px]">
@@ -45,7 +38,7 @@ const SongCard = ({
           {song.artist}
         </p>
 
-               <img
+        <img
           src={`https://cms.samespace.com/assets/${song.cover}`}
           alt={song.name}
           className="w-[400px] aspect-square xs:w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] object-cover rounded-md shadow-xl transition-transform duration-300 hover:scale-[1.01] mx-auto"
@@ -60,9 +53,9 @@ const SongCard = ({
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}
         setBackgroundColor={setBackgroundColor}
-        onNext={handleNextSong} // Pass function to handle next song
-        onPrev={handlePreviousSong} // Pass function to handle previous song
-        toggleSongList={toggleSongList} // Fix: Pass toggleSongList here
+        onNext={handleNextSong}
+        onPrev={handlePreviousSong}
+        toggleSongList={toggleSongList}
       />
     </div>
   );

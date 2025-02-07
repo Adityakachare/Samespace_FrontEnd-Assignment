@@ -14,11 +14,10 @@ const MainPage = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
   const [showSongList, setShowSongList] = useState(true);
 
-  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 640);
-      setShowSongList(true); 
+      setShowSongList(true);
     };
 
     window.addEventListener("resize", handleResize);
